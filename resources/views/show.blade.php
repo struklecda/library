@@ -34,7 +34,7 @@
         <div class="col-6">
             <p><strong>Titre:</strong> {{ $value->title }}</p>
             <p><strong>Auteur:</strong> {{ $value->author }}</p>
-            <p><strong>Date de publication:</strong> {{ $value->published_date }}</p>
+            <p><strong>Date de publication:</strong> {{ \Carbon\Carbon::parse($value->published_date)->format('d/m/Y') }}</p>
             <p><strong>Extrait:</strong> {{ $value->extract }}</p>
             <p><strong>Descritpion:</strong> {{ $value->description }}</p>
             <p><strong>Book added by:</strong> {{ $bookUsername }}</p>
